@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: admin
+  #需要将这个服务注册到Nacos中
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848   #nacos的服务注册中心
+    sentinel:
+      transport:
+        # sentinel服务端地址
+        dashboard: localhost:8858  #sentinel的控制台
+        client-ip: localhost
+      eager: true
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/blog?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=UTC
+    username: root
+    password: zqayy20011013
+
+
+server:
+  port: 8070
